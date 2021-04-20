@@ -20,7 +20,7 @@
           @keyup.enter="submitForm"
         >
           <el-form-item prop="username">
-            <el-input placeholder="请输入用户名" v-model="form.username">
+            <el-input placeholder="請輸入帳號" v-model="form.username">
               <template #suffix>
                 <i class="el-input__icon el-icon-user"></i>
               </template>
@@ -29,7 +29,7 @@
           <el-form-item prop="password">
             <el-input
               :type="lock === 'lock' ? 'password' : 'text'"
-              placeholder="请输入密码"
+              placeholder="請輸入密碼"
               v-model="form.password"
             >
               <template #suffix>
@@ -40,27 +40,27 @@
           <el-form-item style="position: relative">
             <el-input
               v-model="form.captcha"
-              placeholder="请输入验证码"
+              placeholder="請輸入驗證碼"
               style="width: 60%"
             />
             <div class="vPic">
               <img
                 v-if="picPath"
                 :src="picPath"
-                alt="请输入验证码"
+                alt="請輸入驗證碼"
                 @click="loginVefify()"
               />
             </div>
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="submitForm" style="width: 100%"
-              >登 录</el-button
+              >登 入</el-button
             >
           </el-form-item>
         </el-form>
       </div>
 
-      <div class="footer">
+      <!-- <div class="footer">
         <div class="links">
           <a href="http://doc.henrongyi.top/"
             ><img src="@/assets/docs.png" class="link-icon"
@@ -76,7 +76,7 @@
           /></a>
         </div>
         <div class="copyright">Copyright &copy; {{ curYear }} 💖flipped-aurora</div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
