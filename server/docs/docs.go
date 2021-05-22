@@ -597,7 +597,7 @@ var doc = `{
                 "summary": "生成验证码",
                 "responses": {
                     "200": {
-                        "description": "{\"success\":true,\"data\":{},\"msg\":\"验证码获取成功\"}",
+                        "description": "{\"success\":true,\"data\":{},\"msg\":\"驗證碼獲取成功\"}",
                         "schema": {
                             "type": "string"
                         }

@@ -3,12 +3,12 @@
     <div class="container">
       <div class="top">
         <div class="desc">
-          <img class="logo_login" src="@/assets/logo_login.png" alt="" />
+          <img class="logo_login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Weiwuying_logo.svg/1280px-Weiwuying_logo.svg.png" alt="" />
         </div>
         <div class="header">
           <a href="/">
             <!-- <img src="~@/assets/logo.png" class="logo" alt="logo" /> -->
-            <span class="title">Gin-Vue-Admin</span>
+          
           </a>
         </div>
       </div>
@@ -52,11 +52,26 @@
               />
             </div>
           </el-form-item>
+          
+          <div class="input-container">
           <el-form-item>
-            <el-button type="primary" @click="submitForm" style="width: 100%"
+            <el-button type="primary" @click="submitForm" style="width: 80%"
               >登 入</el-button
             >
           </el-form-item>
+
+          <el-form-item>
+            <el-button type="primary" @click="submitForm" style="width:  80%"
+              >訪客QRcode</el-button
+            >
+          </el-form-item>
+
+          <el-form-item>
+            <el-button type="primary" @click="submitForm" style="width:  80%"
+              >訪客預約註冊</el-button
+            >
+          </el-form-item>
+        </div>
         </el-form>
       </div>
 
@@ -87,14 +102,14 @@ import { getCurrentInstance, ref, reactive } from "vue";
 import { useStore } from 'vuex';
 const checkUsername = (rule, value, callback) => {
   if (value.length < 5 || value.length > 12) {
-    return callback(new Error("请输入正确的用户名"));
+    return callback(new Error("請輸入正確的帳號"));
   } else {
     callback();
   }
 };
 const checkPassword = (rule, value, callback) => {
   if (value.length < 6 || value.length > 12) {
-    return callback(new Error("请输入正确的密码"));
+    return callback(new Error("請輸入正確的密碼"));
   } else {
     callback();
   }
@@ -108,8 +123,8 @@ export default {
     const lock = ref("lock");
     const picPath = ref("");
     const form = reactive({
-      username: "admin",
-      password: "123456",
+      username: "",
+      password: "",
       captcha: "",
       captchaId: "",
     });
@@ -131,7 +146,7 @@ export default {
         } else {
           ctx.$message({
             type: "error",
-            message: "请正确填写登录信息",
+            message: "請填入正確的登入資訊",
             showClose: true,
           });
           loginVefify();

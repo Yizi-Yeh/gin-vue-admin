@@ -34,7 +34,7 @@
 }
 
 .logo_login {
-  width: 100px;
+  width: 300px;
 }
 
 #userLayout.user-layout-wrapper {
@@ -53,7 +53,7 @@
     overflow: auto;
     width: 100%;
     min-height: 100%;
-    background: #f9caa6;
+    background: #ffffff;
     background-size: 100%;
     padding: 110px 0 144px;
     a {
@@ -61,11 +61,11 @@
     }
     .top {
       text-align: center;
-      margin-top: -40px;
+      margin-top: 50px;
       .header {
         height: 44px;
         line-height: 44px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         .badge {
           position: absolute;
           display: inline-block;
@@ -100,6 +100,10 @@
       min-width: 260px;
       width: 368px;
       margin: 0 auto;
+      .input-container {
+        margin-top: 30px;
+        text-align: center;
+      }
     }
     .footer {
       position: relative;
@@ -130,6 +134,6 @@
 }
 .el-button--primary {
   color: #fff;
-  background-color: #da4a5c;
-  border-color: #da4a5c;
+  background-color: black;
+  border-color: black;
 }
